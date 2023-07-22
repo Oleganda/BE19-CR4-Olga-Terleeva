@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) > 0) {                 //check here if smth in the 
         <div class='card-body '>
             <h5 class='card-title'>{$row["author_first_name"]} {$row["author_last_name"]}</h5>
             <p class='card-text'> {$row["title"]}</p>
-            <p class='card-text'> Publisher: <a href='publisher.php?id={$row["publisher_name"]}'>{$row["publisher_name"]}</a> {$row["publisher_address"]}</p>
+            <p class='card-text'> Publisher: <a href='publisher.php?publisher_id={$row["publisher_name"]}'>{$row["publisher_name"]}</a> {$row["publisher_address"]}</p>
              <p class='card-text'> Type: {$row["type"]}</p> 
               <p class='card-text'> {$row["short_description"]}</p> 
               <p class='card-text'> First published in: {$row["publish_date"]}</p> 

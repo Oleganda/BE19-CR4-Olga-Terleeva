@@ -7,7 +7,7 @@ $sql = "SELECT * FROM BOOKS WHERE id = $id";
 $result = mysqli_query($connect, $sql);
 $row = mysqli_fetch_assoc($result);
 
-if (isset($_POST["update"])) {     //when btn update clicked we update info
+if (isset($_POST["update"])) {                                         //when btn update clicked we update info
     $title = mysqli_real_escape_string($connect, $_POST["title"]);    //function will escape values before inserting them in the SQL query. 
     $image = uploadFile($_FILES["image"]);                             //used it, because some books had syntax issues while updating
     $type = mysqli_real_escape_string($connect, $_POST["type"]);
@@ -88,7 +88,7 @@ if (isset($_POST["update"])) {     //when btn update clicked we update info
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Availability" name="availability" value="<?= $row["availability"] ?>">
             </div>
 
-            <div class="d-flex justify-content-center m-5 "><button name="update" type="submit" class="btn btn-warning">Update</button></div>
+            <div class="d-flex justify-content-center m-5 "><button name="update" type="submit" class="btn btn-light">Update</button></div>
 
         </form>
     </div>
